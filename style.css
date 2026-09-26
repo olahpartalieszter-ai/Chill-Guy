@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.hatter-kollazs {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('osztalykep.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.sotetito-reteg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 15, 26, 0.85);
+    transition: background 0.3s ease;
+    z-index: -1;
+}
+
+.tartalom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    z-index: 1;
+    padding: 20px;
+}
+
+.focim {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 0px #000, -3px -3px 0px #000;
+    margin: 0;
+}
+
+.neon-gomb {
+    background: none;
+    border: 4px solid #FF0055;
+    color: #FF0055;
+    padding: 20px 40px;
+    font-size: 1.8rem;
+    font-family: 'Arial Black', sans-serif;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #FF0055;
+    transition: all 0.2s ease;
+    animation: pulzal 1.5s infinite;
+}
+
+.neon-gomb:hover {
+    background: #FF0055;
+    color: white;
+    box-shadow: 0 0 35px #FF0055;
+    transform: scale(1.05);
+}
+
+@keyframes pulzal {
+    0% { box-shadow: 0 0 15px #FF0055; }
+    50% { box-shadow: 0 0 30px #FF0055; transform: scale(1.02); }
+    100% { box-shadow: 0 0 15px #FF0055; }
+}
+
+.stressz-doboz, .aranykopes-doboz {
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid #00F5D4;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+}
+
+.csuszka {
+    width: 100%;
+    accent-color: #00F5D4;
+    cursor: pointer;
+}
+
+.kov-gomb {
+    background: #00F5D4;
+    border: none;
+    color: black;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.popup-hatter {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-doboz {
+    background: #111;
+    padding: 30px;
+    border-radius: 20px;
+    border: 5px solid #FF0055;
+    position: relative;
+    max-width: 450px;
+    width: 90%;
+}
+
+.mem-kep {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.bezar-gomb {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 30px; cursor: pointer; color: white;
+}
