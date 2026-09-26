@@ -1,9 +1,9 @@
 
 const aranykopesek = [
-    '"Majd holnap megcsinálom."',
-    '"Tanárnő, a kutya megette a házimat."',
-    '"De hát a többiek sem tanultak!"',
-    '"Ez a doga most nem ér, mert raserants van."'
+    '"Tanár úr, a sportreferens az ilyen betegség?"',
+    '"Mi az a részecskehatározó?"',
+    '"A Habsburg-ház tronfosása"',
+    '"Ami Erdélyben volt, az Erdélyben is marad!"'
 ];
 const memek = [ 'memek/mem1.jpg', 'memek/mem2.jpg', 'memek/mem3.jpg', 'memek/mem4.jpg', 'memek/mem5.jpg',
     'memek/mem6.jpg', 'memek/mem7.jpg', 'memek/mem8.jpg', 'memek/mem9.jpg', 'memek/mem10.jpg',
