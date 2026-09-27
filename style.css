@@ -158,5 +158,44 @@ body {
     box-shadow: 0 0 20px #FF0000;
     transform: scale(1.05);
 }
+/* Új neon lila gomb stílusa */
+.neon-gomb.lila { border-color: #9B5DE5; color: #9B5DE5; box-shadow: 0 0 15px #9B5DE5; margin-top: 10px; }
+.neon-gomb.lila:hover { background: #9B5DE5; color: white; box-shadow: 0 0 35px #9B5DE5; transform: scale(1.05); }
+
+/* Új lila keret a galéria ablaknak */
+.popup-doboz.lila-keret { border: 5px solid #9B5DE5; }
+
+.popup-kep {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Galéria lapozó gombjai */
+.lapozo-sáv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.nav-gomb {
+    background: #9B5DE5;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-family: 'Arial Black', sans-serif;
+    cursor: pointer;
+    border-radius: 8px;
+    flex: 1;
+    transition: background 0.2s;
+}
+
+.nav-gomb:hover {
+    background: #7B3FE4;
+}
+
 
 
