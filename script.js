@@ -1,4 +1,4 @@
-
+let aktualisKepIndex = 0; 
 const aranykopesek = [
     '"Tanár úr, a sportreferens az ilyen betegség?"',
     '"Mi az a részecskehatározó?"',
@@ -21,6 +21,13 @@ const stresszCsuszka = document.getElementById('stresszCsuszka');
 const csuszkaSzoveg = document.getElementById('csuszkaSzoveg');
 const ujAranykopesGomb = document.getElementById('ujAranykopesGomb');
 const aranykopesSzoveg = document.getElementById('aranykopesSzoveg');
+const megnyitGaleriaGomb = document.getElementById('megnyitGaleriaGomb');
+const galeriaPopupHatter = document.getElementById('galeriaPopupHatter');
+const bezarGaleriaGomb = document.getElementById('bezarGaleriaGomb');
+const galeriaFoto = document.getElementById('galeriaFoto');
+const elozoKepGomb = document.getElementById('elozoKepGomb');
+const kovetkezoKepGomb = document.getElementById('kovetkezoKepGomb');
+
 neKattintsGomb.addEventListener('click', () => {
     sotetito.style.background = 'rgba(0,0,0,0)';
     const randomMem = memek[Math.floor(Math.random() * memek.length)];
@@ -59,4 +66,40 @@ stresszCsuszka.addEventListener('input', () => {
 ujAranykopesGomb.addEventListener('click', () => {
     const randomIdezet = aranykopesek[Math.floor(Math.random() * aranykopesek.length)];
     aranykopesSzoveg.innerText = randomIdezet;
+});
+
+megnyitGaleriaGomb.addEventListener('click', () => {
+    sotetito.style.background = 'rgba(0,0,0,0)'; 
+    aktualisKepIndex = 0; 
+    galeriaFoto.src = osztalyKepek[aktualisKepIndex];
+    setTimeout(() => { galeriaPopupHatter.style.display = 'flex'; }, 200);
+});
+
+
+bezarGaleriaGomb.addEventListener('click', () => {
+    galeriaPopupHatter.style.display = 'none';
+    sotetito.style.background = 'rgba(15, 15, 26, 0.85)';
+});
+
+kovetkezoKepGomb.addEventListener('click', () => {
+    aktualisKepIndex++;
+    if (aktualisKepIndex >= osztalyKepek.length) {
+        aktualisKepIndex = 0; 
+    }
+    galeriaFoto.src = osztalyKepek[aktualisKepIndex];
+});
+
+elozoKepGomb.addEventListener('click', () => {
+    aktualisKepIndex--;
+    if (aktualisKepIndex < 0) {
+        aktualisKepIndex = osztalyKepek.length - 1; 
+    }
+    galeriaFoto.src = osztalyKepek[aktualisKepIndex];
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === galeriaPopupHatter) {
+        galeriaPopupHatter.style.display = 'none';
+        sotetito.style.background = 'rgba(15, 15, 26, 0.85)';
+    }
 });
