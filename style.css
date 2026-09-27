@@ -131,24 +131,32 @@ body {
     font-size: 30px; cursor: pointer; color: white;
 }
 
+.youtube-doboz {
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid #FF0000; /* Neonpiros keret */
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
 .yt-gomb {
     display: inline-block;
-    background: none;
-    border: 3px solid #FF0000;
-    color: #FF0000;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    background: #FF0000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
     font-family: 'Arial Black', sans-serif;
     text-decoration: none;
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
     transition: all 0.2s ease;
 }
 
 .yt-gomb:hover {
-    background: #FF0000;
-    color: white;
-    box-shadow: 0 0 25px #FF0000;
+    box-shadow: 0 0 20px #FF0000;
     transform: scale(1.05);
 }
+
 
