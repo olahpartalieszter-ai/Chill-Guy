@@ -11,24 +11,12 @@ const memek = [ 'memek/mem1.jpg', 'memek/mem2.jpg', 'memek/mem3.jpg', 'memek/mem
     'memek/mem16.jpg', 'memek/mem17.jpg', 'memek/mem18.jpg', 'memek/mem19.jpg', 'memek/mem20.jpg',
     'memek/mem21.jpg', 'memek/mem22.jpg', 'memek/mem23.jpg', 'memek/mem24.jpg', 'memek/mem25.jpg',
     'memek/mem26.jpg', 'memek/mem27.jpg', 'memek/mem28.jpg', 'memek/mem29.jpg', 'memek/mem30.jpg','memek/mem31.jpg','memek/mem32.jpg'
-
-// A kód most közvetlenül a főmappából olvassa be a képeket, kihagyva az "osztaly/" mappanevet!
+];
 const osztalyKepek = [];
 for (let i = 0; i <= 100; i++) {
     osztalyKepek.push(`kep (${i}).jpg`);
 }
 
-const ujKepGomb = document.getElementById('ujKepGomb');
-const galeriaKep = document.getElementById('galeriaKep');
-
-ujKepGomb.addEventListener('click', () => {
-    const randomFoto = osztalyKepek[Math.floor(Math.random() * osztalyKepek.length)];
-    galeriaKep.src = randomFoto;
-});
-
-}
-
-];
 const neKattintsGomb = document.getElementById('neKattintsGomb');
 const sotetito = document.getElementById('sotetito');
 const popupHatter = document.getElementById('popupHatter');
@@ -84,12 +72,13 @@ ujAranykopesGomb.addEventListener('click', () => {
     const randomIdezet = aranykopesek[Math.floor(Math.random() * aranykopesek.length)];
     aranykopesSzoveg.innerText = randomIdezet;
 });
-
 megnyitGaleriaGomb.addEventListener('click', () => {
     sotetito.style.background = 'rgba(0,0,0,0)'; 
     aktualisKepIndex = 0; 
     galeriaFoto.src = osztalyKepek[aktualisKepIndex];
-    setTimeout(() => { galeriaPopupHatter.style.display = 'flex'; }, 200);
+    setTimeout(() => { 
+        galeriaPopupHatter.style.display = 'flex'; 
+    }, 200);
 });
 
 
