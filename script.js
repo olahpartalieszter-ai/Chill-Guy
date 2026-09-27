@@ -11,6 +11,12 @@ const memek = [ 'memek/mem1.jpg', 'memek/mem2.jpg', 'memek/mem3.jpg', 'memek/mem
     'memek/mem16.jpg', 'memek/mem17.jpg', 'memek/mem18.jpg', 'memek/mem19.jpg', 'memek/mem20.jpg',
     'memek/mem21.jpg', 'memek/mem22.jpg', 'memek/mem23.jpg', 'memek/mem24.jpg', 'memek/mem25.jpg',
     'memek/mem26.jpg', 'memek/mem27.jpg', 'memek/mem28.jpg', 'memek/mem29.jpg', 'memek/mem30.jpg','memek/mem31.jpg','memek/mem32.jpg'
+
+const osztalyKepek = [];
+for (let i = 0; i <= 160; i++) {
+    osztalyKepek.push(`osztaly/kep (${i}).jpg`);
+}
+
 ];
 const neKattintsGomb = document.getElementById('neKattintsGomb');
 const sotetito = document.getElementById('sotetito');
