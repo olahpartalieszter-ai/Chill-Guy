@@ -3,7 +3,12 @@ const aranykopesek = [
     '"Tanár úr, a sportreferens az ilyen betegség?"',
     '"Mi az a részecskehatározó?"',
     '"A Habsburg-ház tronfosása"',
-    '"Ami Erdélyben volt, az Erdélyben is marad!"'
+    '"Ami Erdélyben volt, az Erdélyben is marad!"',
+    '"Tanárnő,lenyeltem a tollam. Ez most nem releváns!"',
+    '"A Leventének nagyobb a homloka."',
+    '"Gipsz Jakab saxofonozik."',
+    '"Diagram, gyerek!!!!"',
+    '"Magyar népzenei hangszer:szájharmonika"'
 ];
 const memek = [ 'memek/mem1.jpg', 'memek/mem2.jpg', 'memek/mem3.jpg', 'memek/mem4.jpg', 'memek/mem5.jpg',
     'memek/mem6.jpg', 'memek/mem7.jpg', 'memek/mem8.jpg', 'memek/mem9.jpg', 'memek/mem10.jpg',
