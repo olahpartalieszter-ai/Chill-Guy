@@ -44,7 +44,7 @@ neKattintsGomb.addEventListener('click', () => {
     memKep.src = randomMem;
     setTimeout(() => {
         popupHatter.style.display = 'flex';
-    }, 200);
+    }, 1000);
 });
 bezarGomb.addEventListener('click', () => {
     popupHatter.style.display = 'none';
