@@ -10,19 +10,23 @@ const aranykopesek = [
     '"Diagram, gyerek!!!!"',
     '"Magyar népzenei hangszer:szájharmonika"'
 ];
-const memek = [ 'memek/mem1.jpg', 'memek/mem2.jpg', 'memek/mem3.jpg', 'memek/mem4.jpg', 'memek/mem5.jpg',
+
+const memek = [ 
+    'memek/mem1.jpg', 'memek/mem2.jpg', 'memek/mem3.jpg', 'memek/mem4.jpg', 'memek/mem5.jpg',
     'memek/mem6.jpg', 'memek/mem7.jpg', 'memek/mem8.jpg', 'memek/mem9.jpg', 'memek/mem10.jpg',
     'memek/mem11.jpg', 'memek/mem12.jpg', 'memek/mem13.jpg', 'memek/mem14.jpg', 'memek/mem15.jpg',
     'memek/mem16.jpg', 'memek/mem17.jpg', 'memek/mem18.jpg', 'memek/mem19.jpg', 'memek/mem20.jpg',
     'memek/mem21.jpg', 'memek/mem22.jpg', 'memek/mem23.jpg', 'memek/mem24.jpg', 'memek/mem25.jpg',
-    'memek/mem26.jpg', 'memek/mem27.jpg', 'memek/mem28.jpg', 'memek/mem29.jpg', 'memek/mem30.jpg','memek/mem31.jpg','memek/mem32.jpg'
+    'memek/mem26.jpg', 'memek/mem27.jpg', 'memek/mem28.jpg', 'memek/mem29.jpg', 'memek/mem30.jpg',
+    'memek/mem31.jpg', 'memek/mem32.jpg'
 ];
+
 const osztalyKepek = [];
 for (let i = 0; i <= 161; i++) {
     if (i === 1 || i === 2) {
-        osztalyKepek.push(`kep (0).jpg);
+        osztalyKepek.push(`kep (0).jpg`); // Itt javítva a hiányzó idézőjel és zárójel!
     } else {
-        osztalyKepek.push(`osztaly/kep (${i}).jpg`);
+        osztalyKepek.push(`kep (${i}).jpg`); // Közvetlenül a főmappából olvassa a képeket
     }
 }
 
@@ -42,17 +46,23 @@ const galeriaFoto = document.getElementById('galeriaFoto');
 const elozoKepGomb = document.getElementById('elozoKepGomb');
 const kovetkezoKepGomb = document.getElementById('kovetkezoKepGomb');
 
+// Mém Pop-up megnyitása
 neKattintsGomb.addEventListener('click', () => {
     sotetito.style.background = 'rgba(0,0,0,0)';
     const randomMem = memek[Math.floor(Math.random() * memek.length)];
     memKep.src = randomMem;
     setTimeout(() => {
         popupHatter.style.display = 'flex';
-    }, 1000);
+    }, 200);
 });
+
+// Mém Pop-up bezárása gombbal
 bezarGomb.addEventListener('click', () => {
     popupHatter.style.display = 'none';
     sotetito.style.background = 'rgba(15, 15, 26, 0.85)'; 
+});
+
+// Mém bezárás kívülre kattintással
 popupHatter.addEventListener('click', (e) => {
     if (e.target === popupHatter) {
         popupHatter.style.display = 'none';
@@ -60,6 +70,7 @@ popupHatter.addEventListener('click', (e) => {
     }
 });
 
+// Mém bezárás ESC gombbal
 document.addEventListener('keydown', (e) => {
     if (e.key === "Escape" && popupHatter.style.display === 'flex') {
         popupHatter.style.display = 'none';
@@ -67,7 +78,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-});
+// Stressz csúszka
 stresszCsuszka.addEventListener('input', () => {
     if (stresszCsuszka.value > 10) {
         csuszkaSzoveg.innerText = "Chill Guy! Mondtam, hogy ne stresszelj!";
@@ -77,10 +88,14 @@ stresszCsuszka.addEventListener('input', () => {
         }, 800);
     }
 });
+
+// Új aranymondás generálása
 ujAranykopesGomb.addEventListener('click', () => {
     const randomIdezet = aranykopesek[Math.floor(Math.random() * aranykopesek.length)];
     aranykopesSzoveg.innerText = randomIdezet;
 });
+
+// Galéria megnyitása
 megnyitGaleriaGomb.addEventListener('click', () => {
     sotetito.style.background = 'rgba(0,0,0,0)'; 
     aktualisKepIndex = 0; 
@@ -90,12 +105,13 @@ megnyitGaleriaGomb.addEventListener('click', () => {
     }, 200);
 });
 
-
+// Galéria bezárása gombbal
 bezarGaleriaGomb.addEventListener('click', () => {
     galeriaPopupHatter.style.display = 'none';
     sotetito.style.background = 'rgba(15, 15, 26, 0.85)';
 });
 
+// Galéria: Következő kép
 kovetkezoKepGomb.addEventListener('click', () => {
     aktualisKepIndex++;
     if (aktualisKepIndex >= osztalyKepek.length) {
@@ -104,6 +120,7 @@ kovetkezoKepGomb.addEventListener('click', () => {
     galeriaFoto.src = osztalyKepek[aktualisKepIndex];
 });
 
+// Galéria: Előző kép
 elozoKepGomb.addEventListener('click', () => {
     aktualisKepIndex--;
     if (aktualisKepIndex < 0) {
@@ -112,6 +129,7 @@ elozoKepGomb.addEventListener('click', () => {
     galeriaFoto.src = osztalyKepek[aktualisKepIndex];
 });
 
+// Galéria bezárás kívülre kattintással
 window.addEventListener('click', (e) => {
     if (e.target === galeriaPopupHatter) {
         galeriaPopupHatter.style.display = 'none';
