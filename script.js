@@ -18,8 +18,12 @@ const memek = [ 'memek/mem1.jpg', 'memek/mem2.jpg', 'memek/mem3.jpg', 'memek/mem
     'memek/mem26.jpg', 'memek/mem27.jpg', 'memek/mem28.jpg', 'memek/mem29.jpg', 'memek/mem30.jpg','memek/mem31.jpg','memek/mem32.jpg'
 ];
 const osztalyKepek = [];
-for (let i = 0; i <= 161; i++) {
-    osztalyKepek.push(`kep (${i}).jpg`);
+for (let i = 0; i <= 160; i++) {
+    if (i < 100) {
+        osztalyKepek.push(`kep (${i}).jpg`);
+    } else {
+        osztalyKepek.push(`osztaly/kep (${i}).jpg`);
+    }
 }
 
 const neKattintsGomb = document.getElementById('neKattintsGomb');
