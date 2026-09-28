@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="hu">
-    <div class="popup-hatter" id="galeriaPopupHatter">
-        <div class="popup-doboz lila-keret">
-            <span class="bezar-gomb" id="bezarGaleriaGomb">&times;</span>
-            <h2>Osztály Emlékek</h2>
-            <img src="kep (0).jpg" alt="Mém" id="galeriaFoto" class="popup-kep">
-            <div class="lapozo-sáv">
-                <button class="nav-gomb" id="elozoKepGomb">◀ Előző</button>
-                <button class="nav-gomb" id="kovetkezoKepGomb">Következő ▶</button>
-            </div>
-        </div>
-    </div>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raserants - Chill Zóna</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
     <div class="hatter-kollazs"></div>
     <div class="sotetito-reteg" id="sotetito"></div>
+    
     <div class="tartalom">
         <h1 class="focim">Chill Guy</h1>
         <button class="neon-gomb" id="neKattintsGomb">NE KATTINTS RÁ!</button>
         <button class="neon-gomb lila" id="megnyitGaleriaGomb">OSZTÁLY GALÉRIA 📸</button>
+        
         <div class="stressz-doboz">
             <p>Mennyire stresszelsz?</p>
             <input type="range" min="0" max="100" value="0" class="csuszka" id="stresszCsuszka">
             <p class="csuszka-szoveg" id="csuszkaSzoveg">Chillllll.....</p>
         </div>
+        
         <div class="aranykopes-doboz">
             <h3>Aranymondások</h3>
             <p id="aranykopesSzoveg">"Tanár úr, a sportreferens az ilyen betegség?"</p>
             <button class="kov-gomb" id="ujAranykopesGomb">Következő aranymondás</button>
         </div>
+        
         <div class="youtube-doboz">
             <h3>Iratkozz fel te is Atlantoszra:</h3>
-            <a href="https://www.youtube.com/@ZsuzsannaFenyvesin%C3%A9T%C3%B6r%C3%B6k" target="_blank" class=yt-gomb >Iratkozz fel!</a>
+            <a href="https://www.youtube.com/@ZsuzsannaFenyvesin%C3%A9T%C3%B6r%C3%B6k" target="_blank" class="yt-gomb">Iratkozz fel!</a>
         </div>
     </div>
+
+    <!-- 1. MÉM POP-UP ABLAK -->
     <div class="popup-hatter" id="popupHatter">
         <div class="popup-doboz">
             <span class="bezar-gomb" id="bezarGomb">&times;</span>
@@ -47,6 +41,20 @@
             <img src="" alt="Mém" id="memKep" class="mem-kep">
         </div>
     </div>
-    <script src="script.js?v=11"></script>
+
+    <!-- 2. GALÉRIA POP-UP ABLAK (Most már jó helyen, a kód alján!) -->
+    <div class="popup-hatter" id="galeriaPopupHatter">
+        <div class="popup-doboz lila-keret">
+            <span class="bezar-gomb" id="bezarGaleriaGomb">&times;</span>
+            <h2>Osztály Emlékek</h2>
+            <img src="kep (0).jpg" alt="Osztálykép" id="galeriaFoto" class="popup-kep">
+            <div class="lapozo-sáv">
+                <button class="nav-gomb" id="elozoKepGomb">◀ Előző</button>
+                <button class="nav-gomb" id="kovetkezoKepGomb">Következő ▶</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=13"></script>
 </body>
 </html>
