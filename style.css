@@ -52,11 +52,10 @@ body {
     padding: 20px 40px;
     font-size: 1.8rem;
     font-family: 'Arial Black', sans-serif;
-    cursor: pointer;
+    cursor: pointer; /* Itt volt félbeszakadva a kódod! */
     border-radius: 15px;
     box-shadow: 0 0 15px #FF0055;
     transition: all 0.2s ease;
-    animation: pulzal 1.5s infinite;
 }
 
 .neon-gomb:hover {
@@ -66,18 +65,29 @@ body {
     transform: scale(1.05);
 }
 
-@keyframes pulzal {
-    0% { box-shadow: 0 0 15px #FF0055; }
-    50% { box-shadow: 0 0 30px #FF0055; transform: scale(1.02); }
-    100% { box-shadow: 0 0 15px #FF0055; }
+/* Lila neon gomb az osztálygalériának */
+.neon-gomb.lila {
+    border-color: #9B5DE5;
+    color: #9B5DE5;
+    box-shadow: 0 0 15px #9B5DE5;
 }
 
-.stressz-doboz, .aranykopes-doboz {
+.neon-gomb.lila:hover {
+    background: #9B5DE5;
+    color: white;
+    box-shadow: 0 0 35px #9B5DE5;
+}
+
+.stressz-doboz, .aranykopes-doboz, .youtube-doboz {
     background: rgba(0, 0, 0, 0.75);
     border: 2px solid #00F5D4;
     border-radius: 12px;
     padding: 20px;
     width: 320px;
+}
+
+.youtube-doboz {
+    border-color: #FF0000;
 }
 
 .csuszka {
@@ -86,7 +96,7 @@ body {
     cursor: pointer;
 }
 
-.kov-gomb {
+.kov-gomb, .yt-gomb {
     background: #00F5D4;
     border: none;
     color: black;
@@ -95,8 +105,16 @@ body {
     border-radius: 5px;
     margin-top: 10px;
     font-family: 'Arial Black', sans-serif;
+    text-decoration: none;
+    display: inline-block;
 }
 
+.yt-gomb {
+    background: #FF0000;
+    color: white;
+}
+
+/* Pop-up alapok */
 .popup-hatter {
     display: none;
     position: fixed;
@@ -117,7 +135,11 @@ body {
     width: 90%;
 }
 
-.mem-kep {
+.popup-doboz.lila-keret {
+    border-color: #9B5DE5;
+}
+
+.mem-kep, .popup-kep {
     width: 100%;
     max-height: 350px;
     object-fit: contain;
@@ -128,49 +150,9 @@ body {
 .bezar-gomb {
     position: absolute;
     top: 10px; right: 20px;
-    font-size: 30px; cursor: pointer; color: white;
-}
-
-.youtube-doboz {
-    background: rgba(0, 0, 0, 0.75);
-    border: 2px solid #FF0000; /* Neonpiros keret */
-    border-radius: 12px;
-    padding: 20px;
-    width: 320px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-}
-
-.yt-gomb {
-    display: inline-block;
-    background: #FF0000;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-family: 'Arial Black', sans-serif;
-    text-decoration: none;
+    font-size: 30px;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: all 0.2s ease;
-}
-
-.yt-gomb:hover {
-    box-shadow: 0 0 20px #FF0000;
-    transform: scale(1.05);
-}
-/* Új neon lila gomb stílusa */
-.neon-gomb.lila { border-color: #9B5DE5; color: #9B5DE5; box-shadow: 0 0 15px #9B5DE5; margin-top: 10px; }
-.neon-gomb.lila:hover { background: #9B5DE5; color: white; box-shadow: 0 0 35px #9B5DE5; transform: scale(1.05); }
-
-/* Új lila keret a galéria ablaknak */
-.popup-doboz.lila-keret { border: 5px solid #9B5DE5; }
-
-.popup-kep {
-    width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-    border-radius: 10px;
-    margin-top: 15px;
+    color: white;
 }
 
 /* Galéria lapozó gombjai */
@@ -196,6 +178,3 @@ body {
 .nav-gomb:hover {
     background: #7B3FE4;
 }
-
-
-
