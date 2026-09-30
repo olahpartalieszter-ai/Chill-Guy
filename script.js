@@ -8,7 +8,8 @@ const aranykopesek = [
     '"A Leventének nagyobb a homloka."',
     '"Gipsz Jakab saxofonozik."',
     '"Diagram, gyerek!!!!"',
-    '"Magyar népzenei hangszer:szájharmonika"'
+    '"Magyar népzenei hangszer:szájharmonika, skótduda"',
+    '"Soós Angyal-Tóht Angyal"'
 ];
 
 const memek = [ 
