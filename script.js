@@ -86,7 +86,7 @@ stresszCsuszka.addEventListener('input', () => {
         setTimeout(() => {
             stresszCsuszka.value = 0;
             csuszkaSzoveg.innerText = "Teljes CHILL...";
-        }, 800);
+        }, 1200);
     }
 });
 
