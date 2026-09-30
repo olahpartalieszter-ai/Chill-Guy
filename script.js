@@ -25,9 +25,9 @@ const memek = [
 const osztalyKepek = [];
 for (let i = 0; i <= 161; i++) {
     if (i === 1 || i === 2) {
-        osztalyKepek.push(`kep (0).jpg`); // Itt javítva a hiányzó idézőjel és zárójel!
+        osztalyKepek.push(`kep (0).jpg`); 
     } else {
-        osztalyKepek.push(`kep (${i}).jpg`); // Közvetlenül a főmappából olvassa a képeket
+        osztalyKepek.push(`kep (${i}).jpg`); 
     }
 }
 
@@ -57,13 +57,11 @@ neKattintsGomb.addEventListener('click', () => {
     }, 200);
 });
 
-// Mém Pop-up bezárása gombbal
 bezarGomb.addEventListener('click', () => {
     popupHatter.style.display = 'none';
     sotetito.style.background = 'rgba(15, 15, 26, 0.85)'; 
 });
 
-// Mém bezárás kívülre kattintással
 popupHatter.addEventListener('click', (e) => {
     if (e.target === popupHatter) {
         popupHatter.style.display = 'none';
@@ -71,7 +69,6 @@ popupHatter.addEventListener('click', (e) => {
     }
 });
 
-// Mém bezárás ESC gombbal
 document.addEventListener('keydown', (e) => {
     if (e.key === "Escape" && popupHatter.style.display === 'flex') {
         popupHatter.style.display = 'none';
@@ -79,7 +76,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Stressz csúszka
 stresszCsuszka.addEventListener('input', () => {
     if (stresszCsuszka.value > 10) {
         csuszkaSzoveg.innerText = "Chill Guy! Mondtam, hogy ne stresszelj!";
@@ -90,13 +86,11 @@ stresszCsuszka.addEventListener('input', () => {
     }
 });
 
-// Új aranymondás generálása
 ujAranykopesGomb.addEventListener('click', () => {
     const randomIdezet = aranykopesek[Math.floor(Math.random() * aranykopesek.length)];
     aranykopesSzoveg.innerText = randomIdezet;
 });
 
-// Galéria megnyitása
 megnyitGaleriaGomb.addEventListener('click', () => {
     sotetito.style.background = 'rgba(0,0,0,0)'; 
     aktualisKepIndex = 0; 
@@ -106,13 +100,12 @@ megnyitGaleriaGomb.addEventListener('click', () => {
     }, 200);
 });
 
-// Galéria bezárása gombbal
 bezarGaleriaGomb.addEventListener('click', () => {
     galeriaPopupHatter.style.display = 'none';
     sotetito.style.background = 'rgba(15, 15, 26, 0.85)';
 });
 
-// Galéria: Következő kép
+
 kovetkezoKepGomb.addEventListener('click', () => {
     aktualisKepIndex++;
     if (aktualisKepIndex >= osztalyKepek.length) {
@@ -121,7 +114,7 @@ kovetkezoKepGomb.addEventListener('click', () => {
     galeriaFoto.src = osztalyKepek[aktualisKepIndex];
 });
 
-// Galéria: Előző kép
+
 elozoKepGomb.addEventListener('click', () => {
     aktualisKepIndex--;
     if (aktualisKepIndex < 0) {
@@ -130,7 +123,7 @@ elozoKepGomb.addEventListener('click', () => {
     galeriaFoto.src = osztalyKepek[aktualisKepIndex];
 });
 
-// Galéria bezárás kívülre kattintással
+
 window.addEventListener('click', (e) => {
     if (e.target === galeriaPopupHatter) {
         galeriaPopupHatter.style.display = 'none';
