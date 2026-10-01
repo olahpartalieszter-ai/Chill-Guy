@@ -47,7 +47,6 @@ const galeriaFoto = document.getElementById('galeriaFoto');
 const elozoKepGomb = document.getElementById('elozoKepGomb');
 const kovetkezoKepGomb = document.getElementById('kovetkezoKepGomb');
 
-// Mém Pop-up megnyitása
 neKattintsGomb.addEventListener('click', () => {
     sotetito.style.background = 'rgba(0,0,0,0)';
     const randomMem = memek[Math.floor(Math.random() * memek.length)];
