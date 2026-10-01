@@ -65,7 +65,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Lila neon gomb az osztálygalériának */
 .neon-gomb.lila {
     border-color: #9B5DE5;
     color: #9B5DE5;
@@ -114,7 +113,6 @@ body {
     color: white;
 }
 
-/* Pop-up alapok */
 .popup-hatter {
     display: none;
     position: fixed;
@@ -155,7 +153,6 @@ body {
     color: white;
 }
 
-/* Galéria lapozó gombjai */
 .lapozo-sáv {
     display: flex;
     justify-content: space-between;
