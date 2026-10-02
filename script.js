@@ -4,7 +4,8 @@ const aranykopesek = [
     '"Mi az a részecskehatározó?"',
     '"A Habsburg-ház tronfosása"',
     '"Ami Erdélyben volt, az Erdélyben is marad!"',
-    '"Tanárnő,lenyeltem a tollam. Ez most nem releváns!"',
+    '"-Tanárnő,lenyeltem a tollam. 
+      -Ez most nem releváns!"',
     '"A Leventének nagyobb a homloka."',
     '"Gipsz Jakab saxofonozik."',
     '"Diagram, gyerek!!!!"',
