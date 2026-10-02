@@ -9,7 +9,9 @@ const aranykopesek = [
     '"Gipsz Jakab saxofonozik."',
     '"Diagram, gyerek!!!!"',
     '"Magyar népzenei hangszer:szájharmonika, skótduda"',
-    '"Soós Angyal-Tóht Angyal"'
+    '"Soós Angyal-Tóht Angyal"',
+    '"Mosogatórongy"',
+    '"Humán Tinder"'
 ];
 
 const memek = [ 
