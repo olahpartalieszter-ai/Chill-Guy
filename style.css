@@ -175,3 +175,18 @@ body {
 .nav-gomb:hover {
     background: #7B3FE4;
 }
+.video-doboz {
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid #00F5D4;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+}
+
+.sajat-video {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 245, 212, 0.2);
+}
+
