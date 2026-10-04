@@ -1,4 +1,5 @@
 let aktualisKepIndex = 0; 
+let aktualisAranykopesIndex = 0; 
 const aranykopesek = [
     '"Tanár úr, a sportreferens az ilyen betegség?"',
     '"Mi az a részecskehatározó?"',
@@ -88,8 +89,13 @@ stresszCsuszka.addEventListener('input', () => {
 });
 
 ujAranykopesGomb.addEventListener('click', () => {
-    const randomIdezet = aranykopesek[Math.floor(Math.random() * aranykopesek.length)];
-    aranykopesSzoveg.innerText = randomIdezet;
+    aranykopesSzoveg.innerText = aranykopesek[aktualisAranykopesIndex];
+    aktualisAranykopesIndex++;
+    if (aktualisAranykopesIndex >= aranykopesek.length) {
+        aktualisAranykopesIndex = 0;
+    }
+});
+
 });
 
 megnyitGaleriaGomb.addEventListener('click', () => {
