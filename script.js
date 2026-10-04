@@ -96,8 +96,6 @@ ujAranykopesGomb.addEventListener('click', () => {
     }
 });
 
-});
-
 megnyitGaleriaGomb.addEventListener('click', () => {
     sotetito.style.background = 'rgba(0,0,0,0)'; 
     aktualisKepIndex = 0; 
