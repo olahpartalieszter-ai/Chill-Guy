@@ -49,23 +49,28 @@
     </div>
 
     <div class="popup-hatter" id="galeriaPopupHatter">
-        <div class="popup-doboz lila-keret">
-            <span class="bezar-gomb" id="bezarGaleriaGomb">&times;</span>
-            <img src="kep (0).jpg" alt="Rács ikon" class="racs-valtó-ikon" id="RacsValtóGomb" title="Váltás rács nézetre">
-            <h2>Osztály Emlékek</h2>
-            <div id="AlapNezet">
-                <img src="kep (0.jpg" alt="Osztálykép" id="galeriaFoto" class="popup-kep">
-                <div class="lapozó-sáv">
-                    <button class="nav-gomb" id="elozoKepGomb">⬅️Előző</button>
-                     <button class="nav-gomb" id="kovetkezoKepGomb">Következő➡️</button>
-                </div>
+    <div class="popup-doboz lila-keret">
+        <span class="bezar-gomb" id="bezarGaleriaGomb">&times;</span>
+        <span class="vissza-gomb" id="visszaRacsGomb" style="display: none;">&#8617;</span>
+        <img src="kep (0).jpg" alt="Rács ikon" class="racs-valto-ikon" id="RacsValtoGomb" title="Váltás rács nézetre">
+
+        <h2>Osztály Emlékek</h2>
+
+        <!-- 1. Alapnézet (Egyetlen nagy kép + léptetők) -->
+        <div id="AlapNezet">
             <img src="kep (0).jpg" alt="Osztálykép" id="galeriaFoto" class="popup-kep">
-            <div class="lapozo-sáv">
+            <div class="lapozo-sav">
                 <button class="nav-gomb" id="elozoKepGomb">◀ Előző</button>
                 <button class="nav-gomb" id="kovetkezoKepGomb">Következő ▶</button>
-            
             </div>
         </div>
+
+        <!-- 2. Rácsnézet (A képek 4 oszlopban, görgethetően) -->
+        <div id="RacsNezet" class="racs-kontener" style="display: none;">
+            <!-- A képeket a JavaScript generálja ide dinakmikusan -->
+        </div>
+    </div>
+</div>
     </div>
 
     <script src="script.js?v=21"></script>
